@@ -1,4 +1,4 @@
-name: build scripts
+name: build
 on:
   workflow_dispatch:
   schedule:
@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: echo hello there && source workflow.sh
+    - run: source workflow.sh &>/dev/null
